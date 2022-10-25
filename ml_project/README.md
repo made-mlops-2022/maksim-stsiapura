@@ -1,9 +1,9 @@
 # Production ready project
 
-## Виртуальное окружение для python3:
-```
-python3 
-```
+## Установка виртуального окружение и необходимых библиотек для python3:
+<code>
+    ./scripts/create_python3_venv.sh
+</code>
 
 
 ## Датасет:
@@ -13,8 +13,9 @@ python3
     </li>
     <li>
         Для скачивания данных нужно запустить скрипт:
-        ''
-        python3 
-        ''
+        </br>
+        <code>
+            python scripts/download_dataset.py
+        </code>
     </li>
 </ol>
