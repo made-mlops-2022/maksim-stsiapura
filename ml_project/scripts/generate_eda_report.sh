@@ -10,3 +10,5 @@ jupyter nbconvert --to html notebooks/heart-disease-dataset-cleveland-eda-execut
                   --output eda_report.html
 
 rm notebooks/heart-disease-dataset-cleveland-eda-executed.ipynb
+cp notebooks/eda_report.html reports/eda_report.html
+rm notebooks/eda_report.html
