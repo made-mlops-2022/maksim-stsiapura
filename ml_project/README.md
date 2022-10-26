@@ -1,6 +1,6 @@
 # Production ready project
 
-## Установка виртуального окружение и необходимых библиотек для python3:
+## Установка виртуального окружения и необходимых библиотек для python3:
 <code>
     ./scripts/create_python3_venv.sh
 </code>
@@ -25,3 +25,6 @@
 <code>
     ./scripts/generate_eda_report.sh
 </code>
+
+## Модели:
+Для прототипирования использовался ноутбук notebooks/heart-disease-logistic-regression-easy.ipynb. Алгоритмы для классификации: логистическая регрессия LogisticRegression и решающие деревья DecisionTreeClassifier из sklearn.
