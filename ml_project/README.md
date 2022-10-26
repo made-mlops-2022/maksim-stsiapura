@@ -5,7 +5,6 @@
     ./scripts/create_python3_venv.sh
 </code>
 
-
 ## Датасет:
 <ol>
     <li>
@@ -19,3 +18,10 @@
         </code>
     </li>
 </ol>
+
+## EDA
+Ноутбук по EDA: notebooks/heart-disease-dataset-cleveland-eda.ipynb. Чтобы сформировать отчет запустите скрипт:
+</br>
+<code>
+    ./scripts/generate_eda_report.sh
+</code>
