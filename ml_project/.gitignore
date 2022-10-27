@@ -2,7 +2,16 @@
 .venv
 
 # credentials
-credentials
+credentials/*
+!credentials/.gitkeep
 
 # dataset
-data
+data/*
+!data/.gitkeep
+
+# models
+models/*
+!models/.gitkeep
+
+# setup files
+src.*

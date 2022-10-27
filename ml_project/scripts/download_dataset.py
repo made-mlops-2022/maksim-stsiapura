@@ -12,9 +12,9 @@ os.environ["KAGGLE_USERNAME"] = kaggle_creds["username"]
 os.environ["KAGGLE_KEY"] = kaggle_creds["key"]
 from kaggle.api.kaggle_api_extended import KaggleApi
 
-if __name__ == "__main__":
-    api = KaggleApi()
-    api.authenticate()
-    
-    os.makedirs(DATA_PATH, exist_ok=True)
-    api.dataset_download_files(dataset="cherngs/heart-disease-cleveland-uci", path=DATA_PATH, unzip=True)
+api = KaggleApi()
+api.authenticate()
+api.dataset_download_files(
+    dataset="cherngs/heart-disease-cleveland-uci",
+    path=DATA_PATH,
+    unzip=True)
