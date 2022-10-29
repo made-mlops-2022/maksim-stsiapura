@@ -34,6 +34,9 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
           
       - name: Test with pytest
+        env:
+          KAGGLE_USERNAME: maximstepura
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
           cd ml_project
           ./scripts/run_tests.sh
