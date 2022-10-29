@@ -44,18 +44,18 @@
 Можем обучить модельку и положить ее в отдельную папку models:
 </br>
 <code>
-    python src/run_pipeline.py --fit \\  
-                               --X_train "data/X_train.csv" \\  
-                               --y_train "data/y_train.csv" \\  
-                               --model_path "models/model.sav"
+    python src/main.py --fit \\  
+                       --X_train "data/X_train.csv" \\  
+                       --y_train "data/y_train.csv" \\  
+                       --model_path "models/model.sav"
 </code>
 </br>
 
 И сделать предсказание:
 </br>
 <code>
-    python src/run_pipeline.py --predict \\  
-                               --model_path "models/model.sav" \\  
-                               --X_test "data/X_test.csv" \\  
-                               --y_test "data/y_test.csv"                
+    python src/main.py --predict \\  
+                       --model_path "models/model.sav" \\  
+                       --X_test "data/X_test.csv" \\  
+                       --y_test "data/y_test.csv"                
 </code>
