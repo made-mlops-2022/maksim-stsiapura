@@ -17,13 +17,13 @@ if __name__ == "__main__":
     parser.add_argument("--y_test", default="data/y_test.csv")
     args = parser.parse_args()
 
-    logging.info("pipeline started")
-
     if args.fit or True:
-        fit(Model.LOG_REG,
+        logging.info("fit model")
+        fit(Model.DECISION_TREE,
             pd.read_csv(args.X_train),
             pd.read_csv(args.y_train).condition,
             args.model_path)
 
     if args.predict:
+        logging.info("predict data")
         predict(args.model_path, pd.read_csv(args.X_test), args.y_test)

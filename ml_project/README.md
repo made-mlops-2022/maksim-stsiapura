@@ -14,8 +14,16 @@
         Для скачивания данных нужно запустить скрипт:
         </br>
         <code>
-            python scripts/download_dataset.py
+            python src/data/download_dataset.py
         </code>
+    </li>
+    <li>
+        Давайте подготовим искусственные данные с помощью скрипта (разделим на test и train):
+        </br>
+        <code>
+            python src/data/prepare_data.py
+        </code>
+        </br>
     </li>
 </ol>
 
@@ -33,19 +41,12 @@
 В коде программы реализована возможность сделать fit и predict, никакой оценки, так как в реальной жизни зачастую мы не имеет таргеты для тестовой выборки. Ну а если и имеем, то давайте оценивать их в соотвествующем ноутбуке :)
 </br>
 
-Давайте подготовим искусственные данные с помощью скрипта:
+Можем обучить модельку и положить ее в отдельную папку models:
 </br>
 <code>
-    python scripts/prepare_data.py
-</code>
-</br>
-
-Далее можно обучить модельку и положить ее в отдельную папку models:
-</br>
-<code>
-    python src/run_pipeline.py --fit \
-                               --X_train "data/X_train.csv" \
-                               --y_train "data/y_train.csv" \
+    python src/run_pipeline.py --fit \\  
+                               --X_train "data/X_train.csv" \\  
+                               --y_train "data/y_train.csv" \\  
                                --model_path "models/model.sav"
 </code>
 </br>
@@ -53,8 +54,8 @@
 И сделать предсказание:
 </br>
 <code>
-    python src/run_pipeline.py --predict \
-                               --model_path "models/model.sav" \
-                               --X_test "data/X_test.csv" \
+    python src/run_pipeline.py --predict \\  
+                               --model_path "models/model.sav" \\  
+                               --X_test "data/X_test.csv" \\  
                                --y_test "data/y_test.csv"                
 </code>
