@@ -11,11 +11,10 @@ try:
         kaggle_creds = json.loads(fin.read())
     os.environ["KAGGLE_USERNAME"] = kaggle_creds["username"]
     os.environ["KAGGLE_KEY"] = kaggle_creds["key"]
-    from kaggle.api.kaggle_api_extended import KaggleApi
 except FileNotFoundError as err:
     logger.error("Credetials not provided: %s", err)
 
-
+from kaggle.api.kaggle_api_extended import KaggleApi
 api = KaggleApi()
 api.authenticate()
 api.dataset_download_files(
