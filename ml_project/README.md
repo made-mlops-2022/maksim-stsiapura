@@ -59,3 +59,10 @@
                        --X_test "data/X_test.csv" \\  
                        --y_test "data/y_test.csv"                
 </code>
+
+## Тесты:
+Для запуска всех тестов нужно запустить скрипт:
+</br>
+<code>
+    ./scripts/run_tests.sh
+</code>

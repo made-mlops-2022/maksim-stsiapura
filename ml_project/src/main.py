@@ -1,5 +1,5 @@
-from models.fit_predict import Model, fit, predict
-from logger.base_logger import logger
+from src.models.fit_predict import Model, fit, predict
+from src.logger.base_logger import logger
 
 import argparse
 import pandas as pd
@@ -25,7 +25,9 @@ if __name__ == "__main__":
 
         if args.predict:
             logger.info("predict data")
-            predict(args.model_path, pd.read_csv(args.X_test), args.y_test)
+            predict(args.model_path,
+                    pd.read_csv(args.X_test),
+                    args.y_test)
 
     except FileNotFoundError as err:
         logger.error("Passed invalid path: %s", err)

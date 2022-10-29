@@ -1,6 +1,6 @@
-from logger.base_logger import logger
-from models.log_reg import LogReg
-from models.decision_tree import DecisionTree
+from src.logger.base_logger import logger
+from src.models.log_reg import LogReg
+from src.models.decision_tree import DecisionTree
 
 import pickle
 from enum import Enum
