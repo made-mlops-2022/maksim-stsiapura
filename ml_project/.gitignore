@@ -15,3 +15,6 @@ models/*
 
 # setup files
 src.*
+
+# vscode settings
+.vscode
