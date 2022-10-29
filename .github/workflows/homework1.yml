@@ -35,4 +35,5 @@ jobs:
           
       - name: Test with pytest
         run: |
-          ./ml_project/scripts/run_tests.sh
+          cd ml_project
+          ./scripts/run_tests.sh
