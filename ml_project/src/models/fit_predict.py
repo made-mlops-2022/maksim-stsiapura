@@ -8,6 +8,7 @@ import pandas as pd
 
 
 class Model(Enum):
+    NONE = 0
     LOG_REG = 1
     DECISION_TREE = 2
 

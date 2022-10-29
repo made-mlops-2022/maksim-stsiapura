@@ -51,6 +51,14 @@
 </code>
 </br>
 
+Можем сделать fit с помощью конфига:
+</br>
+<code>
+    python src/main.py --fit \\  
+                       --config configs/log_reg_config.yaml
+</code>
+</br>
+
 И сделать предсказание:
 </br>
 <code>
