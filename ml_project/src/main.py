@@ -15,13 +15,17 @@ if __name__ == "__main__":
     parser.add_argument("--y_test", default="data/y_test.csv")
     args = parser.parse_args()
 
-    if args.fit:
-        logger.info("fit model")
-        fit(Model.DECISION_TREE,
-            pd.read_csv(args.X_train),
-            pd.read_csv(args.y_train).condition,
-            args.model_path)
+    try:
+        if args.fit:
+            logger.info("fit model")
+            fit(Model.DECISION_TREE,
+                pd.read_csv(args.X_train),
+                pd.read_csv(args.y_train).condition,
+                args.model_path)
 
-    if args.predict:
-        logger.info("predict data")
-        predict(args.model_path, pd.read_csv(args.X_test), args.y_test)
+        if args.predict:
+            logger.info("predict data")
+            predict(args.model_path, pd.read_csv(args.X_test), args.y_test)
+
+    except FileNotFoundError as err:
+        logger.error("Passed invalid path: %s", err)
