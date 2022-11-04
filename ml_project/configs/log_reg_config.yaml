@@ -1,0 +1,4 @@
+x_train_path: "data/X_train.csv"
+y_train_path: "data/y_train.csv"
+output_model_path: "models/log_reg.sav"
+model_type: "LogReg"

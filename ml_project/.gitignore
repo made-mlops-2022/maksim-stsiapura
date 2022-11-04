@@ -1,0 +1,20 @@
+# python3 virtual environment
+.venv
+
+# credentials
+credentials/*
+!credentials/.gitkeep
+
+# dataset
+data/*
+!data/.gitkeep
+
+# models
+models/*
+!models/.gitkeep
+
+# setup files
+src.*
+
+# vscode settings
+.vscode
