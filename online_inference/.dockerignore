@@ -1,0 +1,25 @@
+# git files
+.gitignore
+README.md
+
+# docker files
+Dockerfile
+
+# python virtual environment
+.venv
+
+# python cache
+**/__pycache__
+
+# pytest cache
+.pytest_cache
+
+# models
+models/*
+
+# data
+data/*
+
+# useless in container
+scripts/run.sh
+src/predict_data.py
